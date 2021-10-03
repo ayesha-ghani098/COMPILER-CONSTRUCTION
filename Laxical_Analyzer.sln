@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laxical_Analyzer", "Laxical_Analyzer\Laxical_Analyzer.csproj", "{A845E0C2-CD0F-4AC6-B16C-528B3AAC04FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A845E0C2-CD0F-4AC6-B16C-528B3AAC04FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A845E0C2-CD0F-4AC6-B16C-528B3AAC04FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A845E0C2-CD0F-4AC6-B16C-528B3AAC04FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A845E0C2-CD0F-4AC6-B16C-528B3AAC04FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85E6728F-1BFA-40C3-A75C-04B9D58D927E}
+	EndGlobalSection
+EndGlobal

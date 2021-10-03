@@ -1,0 +1,29 @@
+++ +++=-- + - && &&                
+|| !   "ayesha!! ""asf
+/*+++++"ayesha123""
+"demo\"string"
+^()()}@$*/
+abcd i .
+abc999
+int i '= 555;
+++++*'(i);"/r"_
+
+
+
+
+
+class car{
+
+// Attributes
+int price;
+string model;
+
+/* Price 
+Display
+Function */
+static void printprice () {
+Console.Writeline("1000000")
+}
+
+
+}
