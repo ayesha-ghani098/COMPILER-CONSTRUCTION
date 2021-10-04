@@ -323,24 +323,18 @@ namespace Laxical_Analyzer
 			// if Character is + then 3 possibilities
 			else if (input[index] == '+')
 			{
-				
-				if (input[index + 1] == '=')
+
+				if (input[index + 1] == '+' && !Char.IsDigit(input[index + 2]))
 				{
 					temp += input[index + 1];
 					index += 2;
 					return temp;
 				}
-				else if (input[index + 1] == '+' && !Char.IsDigit(input[index + 2]))
+				else if (input[index + 1] == '=')
 				{
 					temp += input[index + 1];
 					index += 2;
 					return temp;
-				}
-				else if (input[index] == '+' && input[index+1] != '+')
-				{
-					string word = input[index].ToString();
-					index++;
-					return word;
 				}
 				else if (!Char.IsLetterOrDigit(input[index - 1]) && Char.IsDigit(input[index + 1]))
 				{
@@ -353,7 +347,13 @@ namespace Laxical_Analyzer
 					} while (Char.IsDigit(input[index]));
 					return temp;
 				}
-				
+				else
+				{
+					string word = input[index].ToString();
+					index++;
+					return word;
+				}
+
 
 
 
