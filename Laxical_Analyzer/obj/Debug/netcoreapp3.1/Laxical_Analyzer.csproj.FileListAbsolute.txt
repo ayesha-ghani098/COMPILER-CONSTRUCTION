@@ -4,7 +4,6 @@ C:\Users\Technolet\Desktop\Laxical_Analyzer\Laxical_Analyzer\bin\Debug\netcoreap
 C:\Users\Technolet\Desktop\Laxical_Analyzer\Laxical_Analyzer\bin\Debug\netcoreapp3.1\Laxical_Analyzer.runtimeconfig.dev.json
 C:\Users\Technolet\Desktop\Laxical_Analyzer\Laxical_Analyzer\bin\Debug\netcoreapp3.1\Laxical_Analyzer.dll
 C:\Users\Technolet\Desktop\Laxical_Analyzer\Laxical_Analyzer\bin\Debug\netcoreapp3.1\Laxical_Analyzer.pdb
-C:\Users\Technolet\Desktop\Laxical_Analyzer\Laxical_Analyzer\obj\Debug\netcoreapp3.1\Laxical_Analyzer.csproj.AssemblyReference.cache
 C:\Users\Technolet\Desktop\Laxical_Analyzer\Laxical_Analyzer\obj\Debug\netcoreapp3.1\Laxical_Analyzer.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Technolet\Desktop\Laxical_Analyzer\Laxical_Analyzer\obj\Debug\netcoreapp3.1\Laxical_Analyzer.AssemblyInfoInputs.cache
 C:\Users\Technolet\Desktop\Laxical_Analyzer\Laxical_Analyzer\obj\Debug\netcoreapp3.1\Laxical_Analyzer.AssemblyInfo.cs
@@ -12,3 +11,4 @@ C:\Users\Technolet\Desktop\Laxical_Analyzer\Laxical_Analyzer\obj\Debug\netcoreap
 C:\Users\Technolet\Desktop\Laxical_Analyzer\Laxical_Analyzer\obj\Debug\netcoreapp3.1\Laxical_Analyzer.dll
 C:\Users\Technolet\Desktop\Laxical_Analyzer\Laxical_Analyzer\obj\Debug\netcoreapp3.1\Laxical_Analyzer.pdb
 C:\Users\Technolet\Desktop\Laxical_Analyzer\Laxical_Analyzer\obj\Debug\netcoreapp3.1\Laxical_Analyzer.genruntimeconfig.cache
+C:\Users\Technolet\Desktop\Laxical_Analyzer\Laxical_Analyzer\obj\Debug\netcoreapp3.1\Laxical_Analyzer.csproj.AssemblyReference.cache

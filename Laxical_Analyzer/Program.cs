@@ -7,7 +7,7 @@ namespace Laxical_Analyzer
 	class Program
 	{
 		// file path to read input 
-		static readonly string textFile = "C:/Users/Technolet/source/repos/Compiler/Compiler/input.txt";
+		static readonly string textFile = "C:/Users/Technolet/Desktop/Laxical_Analyzer/Laxical_Analyzer/input.txt";
 
 
 		// defined line number
@@ -191,6 +191,17 @@ namespace Laxical_Analyzer
 			return true;
 		}
 
+		// Checking if string is all digits
+		static bool IsAllDigits(string s)
+		{
+			foreach (char c in s)
+			{
+				if (!char.IsDigit(c))
+					return false;
+			}
+			return true;
+		}
+
 
 
 
@@ -312,29 +323,45 @@ namespace Laxical_Analyzer
 			// if Character is + then 3 possibilities
 			else if (input[index] == '+')
 			{
-				if (input[index + 1] == '+')
+				
+				if (input[index + 1] == '=')
 				{
 					temp += input[index + 1];
 					index += 2;
 					return temp;
 				}
-				else if (input[index + 1] == '=')
+				else if (input[index + 1] == '+' && !Char.IsDigit(input[index + 2]))
 				{
 					temp += input[index + 1];
 					index += 2;
 					return temp;
 				}
-				else
+				else if (input[index] == '+' && input[index+1] != '+')
 				{
 					string word = input[index].ToString();
 					index++;
 					return word;
 				}
+				else if (!Char.IsLetterOrDigit(input[index - 1]) && Char.IsDigit(input[index + 1]))
+				{
+					index++;
+					do
+					{
+						temp += input[index];
+						index++;
+
+					} while (Char.IsDigit(input[index]));
+					return temp;
+				}
+				
+
+
+
 			}
 			// if Character is - then 3 possibilities
 			else if (input[index] == '-')
 			{
-				if (input[index + 1] == '-')
+				if (input[index + 1] == '-' && !Char.IsDigit(input[index + 2]))
 				{
 					temp += input[index + 1];
 					index += 2;
@@ -344,6 +371,17 @@ namespace Laxical_Analyzer
 				{
 					temp += input[index + 1];
 					index += 2;
+					return temp;
+				}
+				else if (!Char.IsLetterOrDigit(input[index - 1]) && Char.IsDigit(input[index + 1]))
+				{
+					index++;
+					do
+					{
+						temp += input[index];
+						index++;
+
+					} while (Char.IsDigit(input[index]));
 					return temp;
 				}
 				else
@@ -451,6 +489,7 @@ namespace Laxical_Analyzer
 						}
 						temp = "";
 					}
+
 					// if Char is operator other than /
 					// it will call operator separator 
 					else if (input[i] != '/')
@@ -476,7 +515,7 @@ namespace Laxical_Analyzer
 
 
 
-				// if Character is String 
+				// if Character is Char or String 
 				// it will call double_quote function  
 				else if (input[i] == '\"')
 				{
@@ -489,17 +528,13 @@ namespace Laxical_Analyzer
 
 
 
-
 				//  if Character is letter or digit
 				else if (Char.IsLetterOrDigit(input[i]))
 				{
 					temp += input[i];
 
-					if (input[i + 1] == '.')
-					{
-
-					}
-					else if (!Char.IsLetterOrDigit(input[i + 1]) && input[i + 1] != '.')
+					
+					if (!Char.IsLetterOrDigit(input[i + 1]) && input[i + 1] != '.')
 					{
 						wordList.Add(id, Tuple.Create(lineNumber, temp));
 						temp = "";
@@ -568,10 +603,15 @@ namespace Laxical_Analyzer
 		{
 			if (File.Exists(textFile))
 			{
+
 				string fileData = File.ReadAllText(textFile);
-				fileData += " ";
+				fileData +=" ";
 				breakWord(ref fileData);
 			}
+            else
+            {
+				Console.Write("File not exist");
+            }
 
 		}
 	}
