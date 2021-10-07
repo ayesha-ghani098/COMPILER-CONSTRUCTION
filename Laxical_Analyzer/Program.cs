@@ -320,11 +320,15 @@ namespace Laxical_Analyzer
 				return word;
 			}
 
+
+
+
+
+
 			// if Character is + then 3 possibilities
-			else if (input[index] == '+')
+			else if (input[index] == '+' || input[index] == '-')
 			{
-
-				if (input[index + 1] == '+' && !Char.IsDigit(input[index + 2]))
+				if ((input[index + 1] == '+' || input[index] == '-') && !Char.IsDigit(input[index + 2]))
 				{
 					temp += input[index + 1];
 					index += 2;
@@ -336,16 +340,40 @@ namespace Laxical_Analyzer
 					index += 2;
 					return temp;
 				}
-				else if (!Char.IsLetterOrDigit(input[index - 1]) && Char.IsDigit(input[index + 1]))
+				else if (Char.IsDigit(input[index + 1]))
 				{
-					index++;
-					do
-					{
-						temp += input[index];
-						index++;
+					if((index-1 >= 0 && index-1 < input.Length))
+                    {
+                        if (!Char.IsLetterOrDigit(input[index - 1]))
+                        {
+							index++;
+							do
+							{
+								temp += input[index];
+								index++;
 
-					} while (Char.IsDigit(input[index]));
-					return temp;
+							} while (Char.IsDigit(input[index]));
+							return temp;
+						}
+                        else
+                        {
+							string word = input[index].ToString();
+							index++;
+							return word;
+						}
+					}
+                    else
+                    {
+						index++;
+						do
+						{
+							temp += input[index];
+							index++;
+
+						} while (Char.IsDigit(input[index]));
+						return temp;
+					}
+					
 				}
 				else
 				{
@@ -358,39 +386,10 @@ namespace Laxical_Analyzer
 
 
 			}
-			// if Character is - then 3 possibilities
-			else if (input[index] == '-')
-			{
-				if (input[index + 1] == '-' && !Char.IsDigit(input[index + 2]))
-				{
-					temp += input[index + 1];
-					index += 2;
-					return temp;
-				}
-				else if (input[index + 1] == '=')
-				{
-					temp += input[index + 1];
-					index += 2;
-					return temp;
-				}
-				else if (!Char.IsLetterOrDigit(input[index - 1]) && Char.IsDigit(input[index + 1]))
-				{
-					index++;
-					do
-					{
-						temp += input[index];
-						index++;
+			
 
-					} while (Char.IsDigit(input[index]));
-					return temp;
-				}
-				else
-				{
-					string word = input[index].ToString();
-					index++;
-					return word;
-				}
-			}
+
+
 			// If Character is <,>,!,= then 4 possibilities
 			else if (input[index] == '<' || input[index] == '>' || input[index] == '!' || input[index] == '=')
 			{
@@ -407,6 +406,11 @@ namespace Laxical_Analyzer
 					return word;
 				}
 			}
+
+
+
+
+
 			// If Character is &, | then 2 possibilities
 			else if (input[index] == '&' || input[index] == '|')
 			{
@@ -501,20 +505,6 @@ namespace Laxical_Analyzer
 
 
 
-
-				// if Character is punctuator it will check through dictionary and add word to wordlist
-				else if (punctuators.ContainsKey(input[i]))
-				{
-					string word = input[i].ToString();
-					wordList.Add(id, Tuple.Create(lineNumber, word));
-					i++;
-				}
-
-
-
-
-
-
 				// if Character is Char or String 
 				// it will call double_quote function  
 				else if (input[i] == '\"')
@@ -524,24 +514,51 @@ namespace Laxical_Analyzer
 				}
 
 
-
-
-
-
 				//  if Character is letter or digit
 				else if (Char.IsLetterOrDigit(input[i]))
 				{
-					temp += input[i];
 
-					
-					if (!Char.IsLetterOrDigit(input[i + 1]) && input[i + 1] != '.')
+						temp += input[i];
+								
+					 if (!Char.IsLetterOrDigit(input[i + 1]) && input[i + 1] != '.')
 					{
 						wordList.Add(id, Tuple.Create(lineNumber, temp));
 						temp = "";
 					}
+					 else if(input[i + 1] == '.')
+					{
+						if(IsAllDigits(temp) && Char.IsDigit(input[i + 2]))
+                        {
+							Console.Write("Yes");
+							i++;
+							temp += input[i];
+							i++;
+							do
+							{
+							
+								temp += input[i];
+								i++;
 
+							} while (Char.IsDigit(input[i]));
+							wordList.Add(id, Tuple.Create(lineNumber, temp));
+							temp = "";
+							
+						}
+						else if(!IsAllDigits(temp) && (!Char.IsLetterOrDigit(input[i + 2]) ||  Char.IsLetterOrDigit(input[i + 2])))
+                        {
+							wordList.Add(id, Tuple.Create(lineNumber, temp));
+							temp = "";
+						}
+                    }
 					i++;
+				}
 
+				// if Character is punctuator it will check through dictionary and add word to wordlist
+				else if (punctuators.ContainsKey(input[i]))
+				{
+					string word = input[i].ToString();
+					wordList.Add(id, Tuple.Create(lineNumber, word));
+					i++;
 				}
 
 
