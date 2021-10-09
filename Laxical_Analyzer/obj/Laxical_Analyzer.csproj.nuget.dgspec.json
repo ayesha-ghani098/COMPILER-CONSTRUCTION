@@ -1,30 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Technolet\\Desktop\\Laxical_Analyzer\\Laxical_Analyzer\\Laxical_Analyzer.csproj": {}
+    "D:\\code\\CC\\Laxical_Analyzer\\Laxical_Analyzer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Technolet\\Desktop\\Laxical_Analyzer\\Laxical_Analyzer\\Laxical_Analyzer.csproj": {
+    "D:\\code\\CC\\Laxical_Analyzer\\Laxical_Analyzer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Technolet\\Desktop\\Laxical_Analyzer\\Laxical_Analyzer\\Laxical_Analyzer.csproj",
+        "projectUniqueName": "D:\\code\\CC\\Laxical_Analyzer\\Laxical_Analyzer.csproj",
         "projectName": "Laxical_Analyzer",
-        "projectPath": "C:\\Users\\Technolet\\Desktop\\Laxical_Analyzer\\Laxical_Analyzer\\Laxical_Analyzer.csproj",
-        "packagesPath": "C:\\Users\\Technolet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Technolet\\Desktop\\Laxical_Analyzer\\Laxical_Analyzer\\obj\\",
+        "projectPath": "D:\\code\\CC\\Laxical_Analyzer\\Laxical_Analyzer.csproj",
+        "packagesPath": "C:\\Users\\Hamza Arain\\.nuget\\packages\\",
+        "outputPath": "D:\\code\\CC\\Laxical_Analyzer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Technolet\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Hamza Arain\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "netcoreapp2.1"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "netcoreapp2.1": {
             "projectReferences": {}
           }
         },
@@ -35,24 +37,19 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
+        "netcoreapp2.1": {
+          "dependencies": {
             "Microsoft.NETCore.App": {
-              "privateAssets": "all"
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
         }
       }
     }
