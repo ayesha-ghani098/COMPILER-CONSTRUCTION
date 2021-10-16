@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "hm+JWEiBgefwDe+VHxePyWvJH+h2DOANb6wI8i7IzQdFT/2uLSF8BVpmqOerDmznH3w2y28WAAt30uCaHdWPng==",
+  "dgSpecHash": "r4zJSvHCQbidkSlBOLlnsJu3RfSE6Ei1NN5iuqN/o9zRiE09yCa3nTGF883eUBgZ1rSdYU4CiIW+eEvfSi6Zww==",
   "success": true,
   "projectFilePath": "C:\\Users\\Technolet\\Desktop\\Laxical_Analyzer\\Laxical_Analyzer\\Laxical_Analyzer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Technolet\\.nuget\\packages\\microsoft.netcore.app\\2.1.0\\microsoft.netcore.app.2.1.0.nupkg.sha512",
+    "C:\\Users\\Technolet\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.1.0\\microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",
+    "C:\\Users\\Technolet\\.nuget\\packages\\microsoft.netcore.dotnethostpolicy\\2.1.0\\microsoft.netcore.dotnethostpolicy.2.1.0.nupkg.sha512",
+    "C:\\Users\\Technolet\\.nuget\\packages\\microsoft.netcore.dotnethostresolver\\2.1.0\\microsoft.netcore.dotnethostresolver.2.1.0.nupkg.sha512",
+    "C:\\Users\\Technolet\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
+    "C:\\Users\\Technolet\\.nuget\\packages\\microsoft.netcore.targets\\2.1.0\\microsoft.netcore.targets.2.1.0.nupkg.sha512",
+    "C:\\Users\\Technolet\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
