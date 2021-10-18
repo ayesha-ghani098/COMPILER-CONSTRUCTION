@@ -2,37 +2,38 @@
 using System.Collections.Generic;
 
 
-namespace Laxical_Analyzer
-{
+namespace LaxicalAnalyzer
+{ 
     class Program
-	{
-		static void Main(string[] args)
-		{
-            // Words dictionary
-            var words = new Dictionary<int, Tuple<int, string>>();
-
-
+    {
+        static void Main(string[] args)
+        {
             // File path
-            string path = @"C:\Users\Technolet\Desktop\Laxical_Analyzer\Laxical_Analyzer\input.txt";
+            // Hamza: D:\code\CC\Laxical_Analyzer\input.txt
+            string path = @"D:\code\CC\Laxical_Analyzer\input.txt";
 
+            // Read file
             Tools t = new Tools();
             string fileText = t.readFile(path);
-            fileText += " ";
 
+            // Import predefined essentials
+            Essentials essentials = new Essentials();
 
-            // defined line number
-            int lineNumberCode = 1;
+            // Laxical analyzer
+            LaxicalAnalyzer la = new LaxicalAnalyzer(essentials.operators, essentials.punctuators,
+                essentials.regexs, essentials.keywords);
 
-            Essentials essenials = new Essentials();
-            LaxicalAnalyxer la = new LaxicalAnalyxer(lineNumberCode, essenials.operators, essenials.punctuators);
+            //// Words dictionary
+            var words = new Dictionary<int, Tuple<int, string>>();
             words = la.BreakWord(ref fileText);
+            var g = la.class_part(ref words);
 
-
-            // looping through wordlist dictionary
-            foreach (KeyValuePair<int, Tuple<int, string>> data in words)
+            //// looping through wordlist dictionary
+            foreach (var data in words)
                 Console.WriteLine(data.Value);
 
 
+            while (true) { }
         }
-	}
+    }
 }

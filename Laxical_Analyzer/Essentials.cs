@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Text.RegularExpressions;
 
 
 
-namespace Laxical_Analyzer
+namespace LaxicalAnalyzer
 {
     class Tools
     {
-        public string readFile(string path) {
+        public string readFile(string path)
+        {
             // Open the file to read from.
-            return File.ReadAllText(path);
+            return File.ReadAllText(path) + " ";
         }
     }
 
@@ -35,31 +35,20 @@ namespace Laxical_Analyzer
             {"!", "LO"}, {"||", "LO"}, {"&&", "LO"},
         };
 
-        //
-        static IDictionary<string, string> keyword_list = new Dictionary<string, string>(){
-                {"int","dt"},{"float","dt"},{"bool","dt"},{"string","dt"},
-               {"public","access-modifier"},{"static","static"},
-                {"class","class"},
-                {"while","while"},
-                {"if","if"},
-                {"else","else"},
-                {"for","for"},
-                {"break","break"},
-                {"true","bool-const"},
-                {"false","bool-const"},
-                {"continous","continous"},
-                 {"struct","struct" }
+        // dictionary for keyword list
+        public IDictionary<string, string> keywords = new Dictionary<string, string>(){
+            {"int","dt"}, {"float","dt"}, {"bool","dt"}, {"string","dt"},
+            {"public","access-modifier"}, {"static","static"}, {"class","class"},
+            {"while","while"}, {"for","for"}, {"struct","struct" },
+            {"if","if"}, {"else","else"}, {"break","break"}, {"continous","continous"},
+            {"true","bool-const"}, {"false","bool-const"},
+        };
 
-
-
-            };
-
-        static Regex RE_integer = new Regex(@"^\d*$");
-        static Regex RE_alphabtes = new Regex(@"^[A-Za-z]$");
-        static Regex RE_number = new Regex(@"^[0-9]$");
-        static Regex RE_float = new Regex(@"^(\d*.\d+|\d*[^.])$");
-        static Regex RE_punctuators = new Regex(@"^,|.|;|[|]|(|)|{|}|:$");
-        static Regex RE_all_punctuators = new Regex(@"^[\x20-\x2F]|[\x3A-\x40]|[\x5B-\x5E]|[\x7B-\x7E]|`$");
-        static Regex RE_identifier = new Regex(@"^([a-zA-Z]+_[0-9])$");
+        // dictionary for regex
+        public IDictionary<string, string> regexs = new Dictionary<string, string>() {
+            {"integer", @"^\d*$"}, {"float", @"^(\d*.\d+|\d*[^.])$"}, {"number", @"^[0-9]$"},
+            {"alphabtes" , @"^[A-Za-z]$"}, {"identifier", @"^([a-zA-Z]+_[0-9])$"},
+            {"punctuators", @"^,|.|;|[|]|(|)|{|}|:$"}, {"all_punctuators", @"^[\x20-\x2F]|[\x3A-\x40]|[\x5B-\x5E]|[\x7B-\x7E]|`$"}
+        };
     }
 }

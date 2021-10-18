@@ -1,31 +1,10 @@
-a+1//-999
-"demo\"string'\n'"abc
-1234+1234
-abc123 = 5
-5+=4
-6+=9
-class
-interface
-9ab
-// my name is hamza arain
-// my name is ayesha
-a+79999
-string word = input[index].ToString();
-index++;
-/*return word;*/
+/=*=
+//
+/*
+*/
 
-class book{
-string name = "OS Concepts";
-int id = 1;
-string author = "William Strawling";
-
-public string getBookName(){
-return name;
-}
-}
-.9999+
--9
--6++
-a+9
-
-
+9*9
+9/9
+=
+=+
++=
