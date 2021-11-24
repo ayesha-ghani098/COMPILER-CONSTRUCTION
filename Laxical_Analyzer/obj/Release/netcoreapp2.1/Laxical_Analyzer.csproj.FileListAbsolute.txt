@@ -1,0 +1,4 @@
+D:\code\CC\Laxical_Analyzer\obj\Release\netcoreapp2.1\Laxical_Analyzer.csprojAssemblyReference.cache
+D:\code\CC\Laxical_Analyzer\obj\Release\netcoreapp2.1\Laxical_Analyzer.csproj.CoreCompileInputs.cache
+D:\code\CC\Laxical_Analyzer\obj\Release\netcoreapp2.1\Laxical_Analyzer.AssemblyInfoInputs.cache
+D:\code\CC\Laxical_Analyzer\obj\Release\netcoreapp2.1\Laxical_Analyzer.AssemblyInfo.cs
